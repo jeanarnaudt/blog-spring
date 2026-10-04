@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: blog
+  datasource:
+    url: jdbc:mysql://localhost:3306/my_blog?createDatabaseIfNotExist=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  show:
+    database:
+      console:
+        link: true
+
+  devtools:
+    restart:
+      # Enable or disable automatic restart (default: true)
+      enabled: true
+      # Poll interval for classpath changes (default: 1s)
+      poll-interval: 1s
+      # Quiet period after last change before triggering restart (default: 400ms)
+      quiet-period: 400ms
+      # Log restart conditions
+      log-condition-evaluation-delta: true
+      # Default exclusions
+      exclude: META-INF/maven/**,META-INF/resources/**,resources/**,static/**,public/**,templates/**,**/*Test.class,**/*Tests.class,git.properties,META-INF/build-info.properties
+      # Add additional exclusions (keeps defaults)
+      additional-exclude: scripts/**,styles/**
+      # Watch additional directories
+      additional-paths: src/main/resources/config,src/main/resources/templates
+    livereload:
+      enabled: false
+    enabled: true
+
+  # Templates reloading during development
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    cache: false
+
+  # Static resources reloading during development
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+      cache:
+        period: 0

@@ -1,0 +1,9 @@
+:root {
+	--background: var(--color-neutral-100);
+	--foreground: var(--color-neutral-600);
+	
+	&[data-theme="dark"] {
+		--background: var(--color-neutral-900);
+		--foreground: var(--color-neutral-400);
+	}
+}

@@ -1,0 +1,62 @@
+@layer components {
+	.posts {
+		display: grid;
+		grid-auto-rows: min-content;
+		
+		article {
+			:where(& > :not(:last-child)) {
+				margin-block-start: calc(calc(var(--spacing) * 2) * 0);
+				margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - 0));
+			}
+			
+			h5 {
+				color: var(--color-neutral-700);
+			}
+			
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+		
+		&.posts--latest {
+			grid-row-gap: calc(var(--spacing) * 6);
+			
+			p > a {
+				position: relative;
+				display: block;
+				width: min-content;
+				text-wrap: nowrap;
+				
+				span {
+					position: relative;
+					z-index: 1;
+					@apply preset-6;
+				}
+				
+				&::after {
+					content: '';
+					position: absolute;
+					inset-inline: 0;
+					bottom: 2px;
+					z-index: 0;
+					width: 100%;
+					height: 3px;
+					background-color: transparent;
+				}
+				
+				&:hover::after {
+					background-color: var(--color-blue-500);
+				}
+			}
+		}
+		
+		&.posts--all {
+			:where(& > :not(:last-child)) {
+				border-style: solid;
+				border-color: var(--color-neutral-200);
+				border-top-width: calc(1px * 0);
+				border-bottom-width: calc(1px * calc(1 - 0));
+			}
+		}
+	}
+}

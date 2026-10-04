@@ -1,0 +1,40 @@
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme inline {
+	--font-sans: 'DM Sans', sans-serif;
+	--font-mono: 'Fira Code', monospace;
+
+	/* Neutral */
+	--color-neutral-900: hsl(20, 6%, 10%);
+	--color-neutral-800: hsl(20, 5%, 12%);
+	--color-neutral-700: hsl(26, 7%, 19%);
+	--color-neutral-600: hsl(30, 3%, 28%);
+	--color-neutral-400: hsl(0, 1%, 75%);
+	--color-neutral-300: hsl(30, 6%, 86%);
+	--color-neutral-200: hsl(30, 11%, 93%);
+	--color-neutral-100: hsl(30, 33%, 98%);
+	--color-white: hsl(0, 0%, 100%);
+	
+	/* Blue */
+	--color-blue-900: hsl(206, 95%, 15%);
+	--color-blue-800: hsl(206, 45%, 55%);
+	--color-blue-700: hsl(206, 61%, 66%);
+	--color-blue-500: hsl(206, 95%, 78%);
+	--color-blue-200: hsl(207, 94%, 94%);
+	
+	/* Green */
+	--color-green-900: hsl(133, 38%, 12%);
+	--color-green-800: hsl(142, 100%, 26%);
+	--color-green-700: hsl(133, 38%, 72%);
+	--color-green-500: hsl(125, 38%, 94%);
+	
+	/* Yellow */
+	--color-yellow-900: hsl(38, 92%, 15%);
+	--color-yellow-800: hsl(38, 95%, 47%);
+	--color-yellow-700: hsl(39, 93%, 73%);
+	--color-yellow-500: hsl(40, 100%, 94%);
+	
+	/* Red */
+	--color-red-600: hsl(4, 74%, 49%);
+	--color-red-400: hsl(4, 86%, 58%);
+}

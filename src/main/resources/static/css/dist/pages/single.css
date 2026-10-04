@@ -1,0 +1,64 @@
+@layer components {
+	.single {
+		article {
+			:where(& > :not(:last-child)) {
+				border-style: solid;
+				border-color: var(--color-neutral-200);
+				border-top-width: calc(1px * 0);
+				border-bottom-width: calc(1px * calc(1 - 0));
+			}
+			color: var(--color-neutral-700);
+			
+			section {
+				:where(& > :not(:last-child)) {
+					margin-block-start: calc(calc(var(--spacing) * 2) * 0);
+					margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - 0));
+				}
+				
+				padding-block: calc(var(--spacing) * 8);
+				
+				&:last-child {
+					padding-block-end: calc(var(--spacing) * 12);
+				}
+			}
+			
+			ul, ol {
+				::marker {
+					font-weight: 600;
+				}
+				
+				padding-inline-start: calc(var(--spacing) * 6);
+				
+				b {
+					font-weight: 600;
+				}
+			}
+			
+			blockquote {
+				position: relative;
+				
+				&::before {
+					position: absolute;
+					left: 0;
+					inset-block: 0;
+					content: "";
+					display: block;
+					width: calc(var(--spacing) * 1);
+					height: 100%;
+					background-color: var(--color-neutral-400);
+				}
+				
+				padding-block: calc(var(--spacing) * 1.5);
+				padding-inline: calc(var(--spacing) * 3);
+				
+				q {
+					@apply preset-7;
+				}
+				
+				p {
+					margin-block-start: calc(var(--spacing) * 2.5);
+				}
+			}
+		}
+	}
+}

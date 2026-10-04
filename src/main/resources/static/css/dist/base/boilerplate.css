@@ -1,0 +1,47 @@
+@layer base {
+	html {
+		font-family: var(--font-sans);
+		font-size: 16px;
+	}
+	
+	*, *::before, *::after {
+		transition: all 0.2s ease-in-out;
+	}
+	
+	body {
+		position: relative;
+		width: 100%;
+		min-height: 100vh;
+		display: grid;
+		grid-template-columns: minmax(20px, 1fr) minmax(335px, 640px) minmax(20px, 1fr);
+		grid-template-rows: auto 1fr auto;
+		background-color: var(--color-neutral-100);
+		color: var(--color-neutral-600);
+	}
+	
+	header, main, footer {
+		grid-column: 2 / -2;
+		position: relative;
+	}
+	
+	header, footer {
+		z-index: 10;
+	}
+	
+	header {
+		grid-row: 1 / 2;
+		top: 20px;
+	}
+	
+	main {
+		grid-row: 1 / -1;
+		z-index: 0;
+		padding-block-end: calc(var(--spacing) * 19);
+		margin-block-start: calc(var(--spacing) * 18.5);
+	}
+	
+	footer {
+		grid-row: 3 / -1;
+		bottom: 32px;
+	}
+}

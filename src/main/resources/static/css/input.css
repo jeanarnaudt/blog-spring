@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@import "./dist/base/theme.css";
+@import "./dist/base/utilities.css";
+@import "./dist/base/typography.css";
+@import "./dist/base/boilerplate.css";
+@import "./dist/layout/header.css";
+@import "./dist/layout/main.css";
+@import "./dist/layout/footer.css";
+@import "./dist/components/posts.css";
+@import "./dist/components/latest.css";
+@import "./dist/components/social.css";
+@import "./dist/pages/home.css";
+@import "./dist/pages/blog.css";
+@import "./dist/pages/single.css";

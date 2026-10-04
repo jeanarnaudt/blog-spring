@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html th:replace="~{fragments/layout :: common(~{::title}, ~{::body})}">
+<head>
+	<title>Blog :: My Articles</title>
+</head>
+<body class="blog">
+<main>
+	<h1 class="sr-only">Blog</h1>
+	
+	<section class="blog__posts">
+		<hgroup>
+			<h2><span>My Articles</span></h2>
+			<p>Below are all my recent blog posts. Click on any title to read the full article.</p>
+		</hgroup>
+		<section class="posts posts--all">
+			<article th:each="post : ${posts}">
+				<h5><a th:href="@{/blog/posts/{slug}(slug=${post.slug})}" th:text="${post.title}">...</a></h5>
+				<p><time th:datetime="${post.publishedAt}" th:text="${#temporals.format(post.publishedAt, 'MMMM d, yyyy')}">...</time></p>
+				<p th:text="${post.description}">...</p>
+			</article>
+		</section>
+	</section>
+</main>
+</body>
+</html>

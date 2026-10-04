@@ -1,0 +1,34 @@
+@layer components {
+	.home {
+		section {
+			&.home__intro {
+				& > h2 {
+					padding-inline-end: 0;
+					margin-block-end: calc(var(--spacing) * 6);
+					
+					span {
+						position: relative;
+						z-index: 1;
+					}
+					
+					&::after {
+						inset-inline: 0 !important;
+						bottom: 4px !important;
+						width: 100% !important;
+						height: 8px !important;
+					}
+				}
+				
+				.social {
+					margin-block-start: calc(var(--spacing) * 6);
+				}
+			}
+			
+			&.home__posts {
+				& > h2 {
+					margin-block-end: calc(var(--spacing) * 8);
+				}
+			}
+		}
+	}
+}

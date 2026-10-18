@@ -1,40 +1,38 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-@theme inline {
-	--font-sans: 'DM Sans', sans-serif;
-	--font-mono: 'Fira Code', monospace;
+@theme {
+	--color-base-100: var(--neutral-0);
+	--color-base-200: var(--neutral-100);
+	--color-base-300: var(--neutral-200);
+	--color-base-content: var(--neutral-600);
+	--color-primary: var(--neutral-700);
+	--color-secondary: var(--neutral-800);
+	--color-accent: var(--neutral-900);
+	--color-neutral: var(--neutral-300);
+	
+	--color-info-fg: var(--blue-700);
+	--color-info-border: var(--blue-500);
+	--color-info-bg: var(--blue-200);
+	--color-success-fg: var(--green-700);
+	--color-success-border: var(--green-500);
+	--color-success-bg: var(--green-200);
+	--color-warning-fg: var(--yellow-700);
+	--color-warning-border: var(--yellow-500);
+	--color-warning-bg: var(--yellow-200);
+	--color-error-fg: var(--red-600);
+	--color-error-border: var(--red-400);
+	
+	--font-sans: var(--sans);
+	--font-mono: var(--mono);
+}
 
-	/* Neutral */
-	--color-neutral-900: hsl(20, 6%, 10%);
-	--color-neutral-800: hsl(20, 5%, 12%);
-	--color-neutral-700: hsl(26, 7%, 19%);
-	--color-neutral-600: hsl(30, 3%, 28%);
-	--color-neutral-400: hsl(0, 1%, 75%);
-	--color-neutral-300: hsl(30, 6%, 86%);
-	--color-neutral-200: hsl(30, 11%, 93%);
-	--color-neutral-100: hsl(30, 33%, 98%);
-	--color-white: hsl(0, 0%, 100%);
-	
-	/* Blue */
-	--color-blue-900: hsl(206, 95%, 15%);
-	--color-blue-800: hsl(206, 45%, 55%);
-	--color-blue-700: hsl(206, 61%, 66%);
-	--color-blue-500: hsl(206, 95%, 78%);
-	--color-blue-200: hsl(207, 94%, 94%);
-	
-	/* Green */
-	--color-green-900: hsl(133, 38%, 12%);
-	--color-green-800: hsl(142, 100%, 26%);
-	--color-green-700: hsl(133, 38%, 72%);
-	--color-green-500: hsl(125, 38%, 94%);
-	
-	/* Yellow */
-	--color-yellow-900: hsl(38, 92%, 15%);
-	--color-yellow-800: hsl(38, 95%, 47%);
-	--color-yellow-700: hsl(39, 93%, 73%);
-	--color-yellow-500: hsl(40, 100%, 94%);
-	
-	/* Red */
-	--color-red-600: hsl(4, 74%, 49%);
-	--color-red-400: hsl(4, 86%, 58%);
+@variant dark {
+	--color-base-100: var(--neutral-800);
+	--color-base-200: var(--neutral-900);
+	--color-base-300: var(--neutral-700);
+	--color-base-content: var(--neutral-400);
+	--color-primary: var(--neutral-0);
+	--color-secondary: var(--neutral-300);
+	--color-accent: var(--neutral-200);
+	--color-neutral: var(--neutral-100);
 }

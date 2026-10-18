@@ -1,24 +1,24 @@
-@utility preset-1 {
+@utility heading-1 {
 	@apply font-sans font-extrabold text-[40px] leading-[130%] tracking-[-1px];
 }
 
-@utility preset-2 {
+@utility heading-2 {
 	@apply font-sans font-extrabold text-[32px] leading-[130%] tracking-[-0.5px];
 }
 
-@utility preset-3 {
+@utility heading-3 {
 	@apply font-sans font-bold text-[28px] leading-[130%] tracking-[-0.5px];
 }
 
-@utility preset-4 {
+@utility heading-4 {
 	@apply font-sans font-semibold text-2xl leading-[130%] tracking-[-0.5px];
 }
 
-@utility preset-5 {
+@utility heading-5 {
 	@apply font-sans font-semibold text-xl leading-[130%] tracking-[-0.5px];
 }
 
-@utility preset-6 {
+@utility heading-6 {
 	@apply font-sans font-medium text-lg leading-[150%] tracking-[-0.2px];
 }
 

@@ -1,0 +1,19 @@
+<header th:fragment="header(activePage)">
+	<div>
+		<img src="/assets/images/image-avatar.jpg" alt="username"/>
+	</div>
+	<nav>
+		<ul aria-label="Main">
+			<li th:class="${activePage == 'home'} ? 'active'"><a th:href="@{/}">home</a></li>
+			<li th:class="${activePage == 'blog'} ? 'active'"><a th:href="@{/blog}">blog</a></li>
+			<li th:class="${activePage == 'about'} ? 'active'"><a th:href="@{/about}">about</a></li>
+			<li th:class="${activePage == 'newsletter'} ? 'active'"><a th:href="@{/newsletter}">newsletter</a></li>
+			<li th:class="${activePage == 'formatting-guide'} ? 'active'"><a th:href="@{/formatting-guide}">Formatting Guide</a></li>
+		</ul>
+		<label for="toggle">
+			<input id="toggle" type="checkbox" name="theme" aria-label="Dark mode" class="sr-only"/>
+			<svg th:replace="~{fragments/icons :: moon}"></svg>
+			<svg th:replace="~{fragments/icons :: sun}"></svg>
+		</label>
+	</nav>
+</header>

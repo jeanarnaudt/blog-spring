@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" xmlns:th="http://www.thymeleaf.org" th:fragment="common (title, content)">
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org" th:fragment="common (title, content)" data-theme="light">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0">
@@ -10,39 +10,16 @@
 		href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" type="text/css" media="all" href="/css/output.css">
+	<script th:src="@{/js/theme.js}"></script>
 	<!--/*@thymesVar id="title" type=""*/-->
 	<title th:replace="${title}">Layout Title</title>
 </head>
 <!--/*@thymesVar id="content" type=""*/-->
 <body>
-<header>
-	<nav class="navbar">
-		<img src="/assets/images/image-avatar.jpg" alt="Avatar" class="navbar__avatar"/>
-		<ul role="navigation" class="navbar__nav">
-			<li th:class="${activePage == 'home'} ? 'active'"><a th:href="@{/}">home</a></li>
-			<li th:class="${activePage == 'blog'} ? 'active'"><a th:href="@{/blog}">blog</a></li>
-			<li th:class="${activePage == 'about'} ? 'active'"><a th:href="@{/about}">about</a></li>
-			<li th:class="${activePage == 'newsletter'} ? 'active'"><a th:href="@{/newsletter}">newsletter</a></li>
-		</ul>
-		<label for="toggle" class="navbar__toggle">
-			<input type="checkbox" name="theme" id="toggle">
-			<svg th:replace="~{fragments/icons :: moon}"></svg>
-		</label>
-	</nav>
-</header>
+<header th:replace="~{fragments/header :: header (activePage)}"></header>
 
-<main th:replace="${content}">
-	<p>Layout content</p>
-</main>
+<main th:replace="${content}"></main>
 
-<footer>
-	<p>Made with ❤️ and ☕️</p>
-	<ul>
-		<li><a href="#"><svg th:replace="~{fragments/icons :: x}"></svg></a></li>
-		<li><a href="#"><svg th:replace="~{fragments/icons :: github}"></svg></a></li>
-		<li><a href="#"><svg th:replace="~{fragments/icons :: linkedin}"></svg></a></li>
-		<li><a href="#"><svg th:replace="~{fragments/icons :: frontend-mentor}"></svg></a></li>
-	</ul>
-</footer>
+<footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>

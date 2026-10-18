@@ -7,28 +7,26 @@
 <main>
 	<h1 class="sr-only">Home</h1>
 	
-	<section class="home__intro">
-		<h2><span>Hi, I’m Paulina 👋</span></h2>
+	<section class="intro">
+		<h1 class="heading-2 headline headline--intro"><span>Hi, I’m Paulina 👋</span></h1>
 		<p>I’m on a journey to become a front-end web developer. I love building little projects, trying out new coding
 			techniques, and sharing what I learn along the way. When I’m not at my desk, you’ll find me reading, hiking
 			through the mountains, or challenging myself on rock-climbing walls.</p>
 		<br>
 		<p>I started this blog to document my progress, keep myself accountable, and hopefully inspire anyone else who’s
 			learning to code. Welcome to my corner of the internet, and thanks for stopping by!</p>
-		<section th:replace="~{fragments/social :: social}"></section>
+		<ul th:replace="~{fragments/social :: ul}"></ul>
 	</section>
-	
-	<section class="home__posts">
-		<h2><span>Latest Articles</span></h2>
-		<section class="posts posts--latest">
-			<article th:each="post : ${latestPosts}">
-				 <h5><a th:href="@{'/blog/posts/' + ${post.slug}}" th:text="${post.title}">Article Title</a></h5>
-				 <p><time th:datetime="${post.publishedAt}" th:text="${#temporals.format(post.publishedAt, 'MMMM d, yyyy')}">...</time></p>
-			</article>
-			<p>
-				<a th:href="@{/blog}"><span>View all articles</span></a>
-			</p>
-		</section>
+	<hr>
+	<section class="latest">
+		<h2 class="heading-2 headline headline--section">Latest Articles</h2>
+		<ul>
+			<li th:each="post : ${latestPosts}">
+				<h3 class="heading-5"><a th:href="@{/blog/posts/{slug}(slug=${post.slug})}" th:text="${post.title}">Article Title</a></h3>
+				<p class="published_at"><time th:datetime="${post.publishedAt}" th:text="${#temporals.format(post.publishedAt, 'MMMM d, yyyy')}">...</time></p>
+			</li>
+		</ul>
+		<p><a th:href="@{/blog}"><span>View all articles</span></a></p>
 	</section>
 </main>
 </body>

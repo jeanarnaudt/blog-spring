@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html th:replace="~{fragments/layout :: common(~{::title}, ~{::body})}">
+<head>
+	<title>Personal Blog :: Formatting Guide</title>
+</head>
+<body class="single">
+<main>
+	<article>
+		<hgroup>
+			<h1>Comprehensive Formatting Guide for Blog Content</h1>
+			<p>Published
+				<time datetime="02-12-2025">January 12, 2025</time>
+			</p>
+		</hgroup>
+		<p>This guide shows all the possible formatting styles for blog articles. Use this guide, along with the article
+			content in the JSON file provided in the project to format the text.</p>
+		<hr>
+		<h3>Headings and Subheadings</h3>
+		<p>Headings are the backbone of your content structure. They help readers navigate the page effortlessly.</p>
+		<h1>Heading One</h1>
+		<h2>Heading Two</h2>
+		<h3>Heading Three</h3>
+		<h4>Heading Four</h4>
+		<h5>Heading Five</h5>
+		<h6>Heading Six</h6>
+		<hr>
+		<h3>Paragraphs</h3>
+		<p>Web design isn’t just about aesthetics; it’s about creating an inclusive and functional experience for all users.
+			A strong foundation in HTML, CSS, and JavaScript is key to achieving this.</p>
+		<hr>
+		<h3>Lists</h3>
+		<p>Lists organize content for clarity and emphasis.</p>
+		<p><strong>Unordered List Example:</strong></p>
+		<ul>
+			<li>Unordered List Item</li>
+			<li>Unordered List Item</li>
+			<li>Unordered List Item</li>
+		</ul>
+		<p><strong>Ordered List Example:</strong></p>
+		<ol>
+			<li>Ordered List Item</li>
+			<li>Ordered List Item</li>
+			<li>Ordered List Item</li>
+		</ol>
+		<hr>
+		<h3>Emphasis</h3>
+		<p>Emphasize important points to draw attention.</p>
+		<ul>
+			<li>Use bold text for critical details.</li>
+			<li>Use italic text for subtle emphasis.</li>
+		</ul>
+		<hr>
+		<h3>Inline Code</h3>
+		<p>Include small code snippets directly within your text.</p>
+		<p>Use the <code>display: flex;</code> property to create flexible layouts.</p>
+		<hr>
+		<h3>Code Blocks</h3>
+		<p>For longer code snippets, use code blocks with syntax highlighting.</p>
+		<pre><code>
+			< div class = " container " >
+				&nbsp;< h1 >Hello, World!< / h1 >
+			< / div >
+		</code></pre>
+		<hr>
+		<h3>Quotes</h3>
+		<p>Highlight important statements or references.</p>
+		<blockquote>
+			<q>The best way to learn to code is by building projects.</q>
+		</blockquote>
+		<hr>
+		<h3>Callouts</h3>
+		<p>Write important notes to add context or information to the main content.</p>
+		<div class="callout callout--success">
+			<div class="callout__icon">
+				<svg th:replace="~{fragments/icons :: tip}"></svg>
+			</div>
+			<div class="callout__content">
+				<h5>Tip: Start Small</h5>
+				<p>Begin your journey with smaller projects to build confidence and gradually take on bigger challenges.</p>
+			</div>
+		</div>
+		<div class="callout callout--warning">
+			<div class="callout__icon">
+				<svg th:replace="~{fragments/icons :: warning}"></svg>
+			</div>
+			<div class="callout__content">
+				<h5>Tip: Start Small</h5>
+				<p>Begin your journey with smaller projects to build confidence and gradually take on bigger challenges.</p>
+			</div>
+		</div>
+		<div class="callout callout--info">
+			<div class="callout__icon">
+				<svg th:replace="~{fragments/icons :: info}"></svg>
+			</div>
+			<div class="callout__content">
+				<h5>Tip: Start Small</h5>
+				<p>Begin your journey with smaller projects to build confidence and gradually take on bigger challenges.</p>
+			</div>
+		</div>
+		<hr>
+		<h3>Hyperlinks</h3>
+		<p>Hyperlinks connect readers to additional resources or pages.</p>
+		<p>Learn more about <a href="#">Frontend Mentor</a>.</p>
+		<hr>
+		<h3>Images and Diagrams</h3>
+		<p>Visuals make your content more engaging and easier to understand. Add captions for context.</p>
+		<figure>
+			<img th:src="@{/assets/images/software-developer-at-work-large.jpg}" alt="Description of the image">
+			<figcaption>Caption: A software developer programming with three monitor.</figcaption>
+		</figure>
+		<hr>
+		<p>Tables are perfect for displaying structured data.</p>
+		<table class="w-full border border-neutral-200">
+			<thead>
+				<tr>
+					<th class="border border-neutral-200">Language</th>
+					<th class="border border-neutral-200">Purpose</th>
+					<th class="border border-neutral-200">Difficulty</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="border border-neutral-200">HTML</td>
+					<td class="border border-neutral-200">Structure</td>
+					<td class="border border-neutral-200">Medium</td>
+				</tr>
+				<tr>
+					<td class="border border-neutral-200">CSS</td>
+					<td class="border border-neutral-200">Styling</td>
+					<td class="border border-neutral-200">Medium</td>
+				</tr>
+				<tr>
+					<td class="border border-neutral-200">JavaScript</td>
+					<td class="border border-neutral-200">Interactivity</td>
+					<td class="border border-neutral-200">Advanced</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<h3>Conclusion</h3>
+		<p>Incorporating these text formats in your design not only enhances readability but also improves user engagement. By mixing headings, lists, quotes, and visuals, you can create content that’s both informative and visually appealing.</p>
+	</article>
+</main>
+</body>
+</html>

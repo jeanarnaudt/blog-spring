@@ -44,4 +44,10 @@ public class BlogController {
 		return "newsletter";
 	}
 	
+	@GetMapping("/formatting-guide")
+	public String formattingGuide(ModelMap modelMap) {
+		modelMap.addAttribute("activePage", "formatting-guide");
+		return "formatting-guide";
+	}
+	
 }

@@ -1,27 +1,37 @@
 @layer components {
 	header {
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+		background-color: var(--color-base-100);
+		padding: calc(var(--spacing) * 1.25);
+		border: 1px solid var(--color-base-300);
+		border-radius: calc(var(--spacing) * 2.5);
+		
+		div {
+			display: block;
+			width: calc(var(--spacing) * 10);
+			height: calc(var(--spacing) * 10);
+			overflow: hidden;
+			border-radius: calc(var(--spacing) * 2);
+			
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		
 		nav {
 			width: 100%;
-			display: flex;
-			align-items: center;
-			column-gap: calc(var(--spacing) * 5);
-			background-color: var(--color-white);
-			padding: calc(var(--spacing) * 1.5);
-			border: 1px solid var(--color-neutral-200);
-			border-radius: calc(var(--spacing) * 2.5);
-			
-			& > img {
-				width: calc(var(--spacing) * 10);
-				height: calc(var(--spacing) * 10);
-				object-fit: cover;
-				border-radius: calc(var(--spacing) * 2.5);
-			}
+			display: grid;
+			grid-template-columns: auto auto;
+			grid-column-gap: calc(var(--spacing) * 5);
 			
 			& > ul {
 				display: flex;
 				align-items: center;
 				column-gap: calc(var(--spacing) * 6);
-				margin-left: auto;
 				
 				li {
 					position: relative;
@@ -29,7 +39,7 @@
 					&::after {
 						position: absolute;
 						z-index: 0;
-						bottom: 3px;
+						bottom: 2px;
 						inset-inline: 0;
 						content: '';
 						display: block;
@@ -39,15 +49,17 @@
 					}
 					
 					&:hover::after, &.active::after {
-						background-color: var(--color-blue-500);
-					}
-					
-					&.active::after {
-						color: var(--color-neutral-700);
+						background-color: var(--color-info-border);
 					}
 					
 					a {
-						@apply relative z-1 preset-8 capitalize;
+						position: relative;
+						z-index: 1;
+						text-transform: capitalize;
+						
+						&:hover {
+							color: var(--color-primary);
+						}
 					}
 				}
 			}
@@ -57,25 +69,46 @@
 				place-items: center;
 				width: calc(var(--spacing) * 10);
 				height: calc(var(--spacing) * 10);
-				background-color: var(--color-neutral-100);
-				color: var(--color-neutral-900);
-				border: 1px solid var(--color-neutral-200);
+				background-color: var(--color-base-100);
+				color: var(--color-primary);
+				border: 1px solid var(--color-base-300);
 				border-radius: calc(var(--spacing) * 2.5);
 				cursor: pointer;
 				
+				&:has(input:focus-visible) {
+					outline: 1px solid var(--color-info-border);
+					outline-offset: 2px;
+					border-radius: 6px;
+				}
+				
 				&:hover {
-					background-color: var(--color-neutral-900);
-					color: var(--color-neutral-100);
-					border-color: var(--color-neutral-100);
+					background-color: var(--color-primary);
+					color: var(--color-base-100);
+					border-color: var(--color-neutral);
 				}
 				
 				input {
 					grid-column: 1 / -1;
-					display: none;
 				}
 				
 				svg {
 					grid-column: 1 / -1;
+					
+					&.moon {
+						display: block;
+						
+						@variant dark {
+							display: none;
+						}
+					}
+					
+					&.sun {
+						display: none;
+						
+						@variant dark {
+							display: block;
+						}
+					}
 				}
 			}
 		}

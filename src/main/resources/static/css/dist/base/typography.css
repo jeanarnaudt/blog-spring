@@ -1,5 +1,5 @@
 @layer base {
-	h1 {
+	/*h1 {
 		font-size: 40px;
 		font-weight: 800;
 		line-height: 1.3;
@@ -7,26 +7,10 @@
 	}
 	
 	h2 {
-		position: relative;
-		width: min-content;
-		color: var(--color-neutral-700);
 		font-size: 32px;
 		font-weight: 800;
 		line-height: 1.3;
 		letter-spacing: -0.031em;
-		text-wrap: nowrap;
-		padding-inline-end: calc(var(--spacing) * 12.5);
-		
-		&::after {
-			content: '';
-			position: absolute;
-			right: 0;
-			bottom: 9px;
-			width: 40px;
-			height: 3px;
-			z-index: 0;
-			background-color: var(--color-blue-500);
-		}
 	}
 	
 	h3 {
@@ -55,20 +39,66 @@
 		font-weight: 500;
 		line-height: 1.5;
 		letter-spacing: -0.031em;
-	}
-	
+	}*/
 	p {
-		font-size: clamp(0.875rem, 0.684vw + 0.715rem, 1.125rem);
+		font-size: 18px;
 		font-weight: 400;
 		line-height: 1.5;
 		letter-spacing: -0.013em;
 	}
 	
-	time {
+	nav a {
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 1.3;
+		letter-spacing: -0.013em;
+	}
+	
+	.published_at {
 		font-size: 16px;
 		font-weight: 400;
 		font-style: italic;
 		line-height: 1.3;
 		letter-spacing: -0.013em;
+	}
+	
+	.headline {
+		position: relative;
+		width: min-content;
+		text-wrap: nowrap;
+		
+		span {
+			position: relative;
+			z-index: 1;
+		}
+		
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			background-color: var(--color-info-border);
+		}
+		
+		&.headline--intro {
+			width: min-content;
+			
+			&::after {
+				inset-inline: 0;
+				bottom: 5px;
+				width: 100%;
+				height: 8px;
+			}
+		}
+		
+		&.headline--section {
+			padding-inline-end: calc(var(--spacing) * 12.5);
+			
+			&::after {
+				right: 0;
+				bottom: 9px;
+				width: 40px;
+				height: 3px;
+			}
+		}
 	}
 }

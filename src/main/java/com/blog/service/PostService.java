@@ -9,6 +9,8 @@ public interface PostService {
 	List<PostDto> findAll();
 	
 	List<PostDto> findLatest();
+	
+	PostDto findBySlug(String slug);
 
 }
 

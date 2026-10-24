@@ -1,26 +1,23 @@
 @layer components {
-	section.posts {
-		display: grid;
-		grid-auto-rows: min-content;
-		
-		:where(& > :not(:last-child)) {
-			border-style: solid;
-			border-top-width: calc(1px * 0);
-			border-bottom-width: calc(1px * calc(1 - 0));
-		}
-		
-		& > hgroup {
-			p {
-				margin-block-start: calc(var(--spacing) * 1.5);
-			}
-			padding-block-end: calc(var(--spacing) * 6);
-		}
-		
-		& > article {
-			padding-block: calc(var(--spacing) * 5);
+	.blog {
+		section.posts {
+			display: grid;
+			grid-auto-rows: min-content;
 			
-			& > p {
-				margin-block-start: calc(var(--spacing) * 2);
+			hgroup {
+				@apply pb-6 border-b border-base-300;
+				
+				p {
+					@apply mt-1.5;
+				}
+			}
+			
+			ul {
+				@apply divide-y divide-base-300;
+				
+				.post {
+					@apply py-5;
+				}
 			}
 		}
 	}

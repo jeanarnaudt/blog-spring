@@ -1,45 +1,29 @@
 @layer components {
-	section {
-		&.intro {
-			& > h1 {
-				margin-block-end: calc(var(--spacing) * 6);
+	.home {
+		section {
+			&.intro {
+				& > h1 {
+					margin-block-end: calc(var(--spacing) * 6);
+				}
+				
+				.social {
+					margin-block-start: calc(var(--spacing) * 6);
+				}
 			}
 			
-			.social {
-				margin-block-start: calc(var(--spacing) * 6);
+			&.posts {
+				& > ul {
+					@apply space-y-6 my-8;
+				}
+				
+				& > p > a {
+					@apply preset-6 underline decoration-3 decoration-info-str;
+				}
 			}
 		}
 		
-		&.latest {
-			& > h2 {
-				margin-block-end: calc(var(--spacing) * 8);
-			}
-			
-			& > ul {
-				display: grid;
-				grid-row-gap: calc(var(--spacing) * 6);
-				margin-block-end: calc(var(--spacing) * 8);
-				
-				li {
-					h3 {
-						margin-block-end: calc(var(--spacing) * 2);
-					}
-				}
-				
-				& + p > a {
-					text-decoration: underline;
-					text-decoration-color: var(--color-info-border);
-					text-decoration-thickness: 3px;
-					
-					&:hover {
-						color: var(--color-primary);
-					}
-				}
-			}
+		hr {
+			margin-block: calc(var(--spacing) * 12);
 		}
-	}
-	
-	hr {
-		margin-block: calc(var(--spacing) * 12);
 	}
 }

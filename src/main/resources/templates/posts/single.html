@@ -3,17 +3,16 @@
 <head>
 	<title th:text="${post.title}">Blog :: My Articles</title>
 </head>
-<body class="single">
+<body>
 <main>
-	<article>
+	<article class="post">
 		<hgroup>
-			<h1 th:text="${post.title}">...</h1>
-			<p>Published
-				<time th:datetime="${post.publishedAt}" th:text="${#temporals.format(post.publishedAt, 'MMMM d, yyyy')}">...
-				</time>
+			<h1 th:text="${post.title}">Blog :: My Articles</h1>
+			<p class="post-meta">Published
+				<time th:datetime="${post.publishedAt}" th:text="${#temporals.format(post.publishedAt, 'MMMM d, yyyy')}"></time>
 			</p>
 		</hgroup>
-		<section th:utext="${post.content}"></section>
+		[(${post.content})]
 	</article>
 </main>
 </body>

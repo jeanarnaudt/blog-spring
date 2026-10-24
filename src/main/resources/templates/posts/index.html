@@ -3,20 +3,22 @@
 <head>
 	<title>Blog :: My Articles</title>
 </head>
-<body>
+<body class="blog">
 <main>
 	<h1 class="sr-only">Blog</h1>
 	
-	<section class="posts divide-y divide-base-300">
+	<section class="posts">
 		<hgroup>
-			<h2 class="heading-2 headline headline--section"><span>My Articles</span></h2>
+			<h2 class="preset-2 headline headline--section"><span>My Articles</span></h2>
 			<p>Below are all my recent blog posts. Click on any title to read the full article.</p>
 		</hgroup>
-		<article th:each="post : ${posts}">
-			<h3 class="heading-5"><a th:href="@{/blog/posts/{slug}(slug=${post.slug})}" th:text="${post.title}">...</a></h3>
-			<p class="published_at"><time th:datetime="${post.publishedAt}" th:text="${#temporals.format(post.publishedAt, 'MMMM d, yyyy')}">...</time></p>
-			<p th:text="${post.description}">...</p>
-		</article>
+		<ul>
+			<li th:each="post : ${posts}" class="post">
+				<h3 class="post-title"><a th:href="@{/blog/posts/{slug}(slug=${post.slug})}" th:text="${post.title}">...</a></h3>
+				<p class="post-meta"><time th:datetime="${post.publishedAt}" th:text="${#temporals.format(post.publishedAt, 'MMMM d, yyyy')}">...</time></p>
+				<p class="post-excerpt" th:text="${post.description}">...</p>
+			</li>
+		</ul>
 	</section>
 </main>
 </body>

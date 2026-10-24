@@ -8,10 +8,10 @@
 @import "./dist/layout/header.css";
 @import "./dist/layout/main.css";
 @import "./dist/layout/footer.css";
-/*@import "./dist/components/posts.css";*/
+@import "./dist/components/posts.css";
 /*@import "./dist/components/latest.css";*/
 @import "./dist/components/social.css";
 @import "./dist/components/callout.css";
 @import "./dist/pages/home.css";
 @import "./dist/pages/blog.css";
-/*@import "./dist/pages/single.css";*/
+@import "./dist/pages/single.css";

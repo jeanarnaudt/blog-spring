@@ -4,6 +4,7 @@
 	--color-base-100: var(--neutral-0);
 	--color-base-200: var(--neutral-100);
 	--color-base-300: var(--neutral-200);
+	--color-base-400: var(--neutral-400);
 	--color-base-content: var(--neutral-600);
 	--color-primary: var(--neutral-700);
 	--color-secondary: var(--neutral-800);
@@ -11,13 +12,13 @@
 	--color-neutral: var(--neutral-300);
 	
 	--color-info-fg: var(--blue-700);
-	--color-info-border: var(--blue-500);
+	--color-info-str: var(--blue-500);
 	--color-info-bg: var(--blue-200);
 	--color-success-fg: var(--green-700);
-	--color-success-border: var(--green-500);
+	--color-success-str: var(--green-500);
 	--color-success-bg: var(--green-200);
 	--color-warning-fg: var(--yellow-700);
-	--color-warning-border: var(--yellow-500);
+	--color-warning-str: var(--yellow-500);
 	--color-warning-bg: var(--yellow-200);
 	--color-error-fg: var(--red-600);
 	--color-error-border: var(--red-400);
@@ -30,9 +31,17 @@
 	--color-base-100: var(--neutral-800);
 	--color-base-200: var(--neutral-900);
 	--color-base-300: var(--neutral-700);
+	--color-base-400: var(--neutral-600);
 	--color-base-content: var(--neutral-400);
 	--color-primary: var(--neutral-0);
 	--color-secondary: var(--neutral-300);
 	--color-accent: var(--neutral-200);
 	--color-neutral: var(--neutral-100);
+	
+	--color-info-str: var(--blue-700);
+	--color-info-bg: var(--blue-900);
+	--color-success-str: var(--green-700);
+	--color-success-bg: var(--green-900);
+	--color-warning-str: var(--yellow-700);
+	--color-warning-bg: var(--yellow-900);
 }

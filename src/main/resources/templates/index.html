@@ -8,7 +8,7 @@
 	<h1 class="sr-only">Home</h1>
 	
 	<section class="intro">
-		<h1 class="heading-2 headline headline--intro"><span>Hi, I’m Paulina 👋</span></h1>
+		<h1 class="preset-2 headline headline--intro"><span>Hi, I’m Paulina 👋</span></h1>
 		<p>I’m on a journey to become a front-end web developer. I love building little projects, trying out new coding
 			techniques, and sharing what I learn along the way. When I’m not at my desk, you’ll find me reading, hiking
 			through the mountains, or challenging myself on rock-climbing walls.</p>
@@ -18,12 +18,12 @@
 		<ul th:replace="~{fragments/social :: ul}"></ul>
 	</section>
 	<hr>
-	<section class="latest">
-		<h2 class="heading-2 headline headline--section">Latest Articles</h2>
+	<section class="posts">
+		<h2 class="preset-2 headline headline--section">Latest Articles</h2>
 		<ul>
-			<li th:each="post : ${latestPosts}">
-				<h3 class="heading-5"><a th:href="@{/blog/posts/{slug}(slug=${post.slug})}" th:text="${post.title}">Article Title</a></h3>
-				<p class="published_at"><time th:datetime="${post.publishedAt}" th:text="${#temporals.format(post.publishedAt, 'MMMM d, yyyy')}">...</time></p>
+			<li th:each="post : ${latestPosts}" class="post">
+				<h3 class="post-title"><a th:href="@{/blog/posts/{slug}(slug=${post.slug})}" th:text="${post.title}">Article Title</a></h3>
+				<p class="post-meta"><time th:datetime="${post.publishedAt}" th:text="${#temporals.format(post.publishedAt, 'MMMM d, yyyy')}">...</time></p>
 			</li>
 		</ul>
 		<p><a th:href="@{/blog}"><span>View all articles</span></a></p>

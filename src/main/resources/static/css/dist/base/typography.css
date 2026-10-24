@@ -1,51 +1,41 @@
 @layer base {
-	/*h1 {
-		font-size: 40px;
-		font-weight: 800;
-		line-height: 1.3;
-		letter-spacing: -0.063em;
-	}
-	
-	h2 {
-		font-size: 32px;
-		font-weight: 800;
-		line-height: 1.3;
-		letter-spacing: -0.031em;
-	}
-	
-	h3 {
-		font-size: 28px;
-		font-weight: 700;
-		line-height: 1.3;
-		letter-spacing: -0.031em;
-	}
-	
-	h4 {
-		font-size: 24px;
-		font-weight: 600;
-		line-height: 1.3;
-		letter-spacing: -0.031em;
-	}
-	
-	h5 {
-		font-size: 20px;
-		font-weight: 600;
-		line-height: 1.3;
-		letter-spacing: -0.031em;
-	}
-	
-	h6 {
-		font-size: 18px;
-		font-weight: 500;
-		line-height: 1.5;
-		letter-spacing: -0.031em;
+	/*article {
+		h1 {
+			@apply preset-1;
+			
+			& + p {
+				margin-top: calc(var(--spacing) * 3);
+			}
+		}
+		
+		h2 {
+			@apply preset-2;
+		}
+		
+		h3 {
+			@apply preset-3;
+		}
+		
+		h4 {
+			@apply preset-4;
+		}
+		
+		h5 {
+			@apply preset-5;
+		}
+		
+		h6 {
+			@apply preset-6;
+		}
+		
+		p {
+			@apply preset-7;
+			
+			&.post-meta {
+				@apply preset-8 italic;
+			}
+		}
 	}*/
-	p {
-		font-size: 18px;
-		font-weight: 400;
-		line-height: 1.5;
-		letter-spacing: -0.013em;
-	}
 	
 	nav a {
 		font-size: 16px;
@@ -54,7 +44,7 @@
 		letter-spacing: -0.013em;
 	}
 	
-	.published_at {
+	.date {
 		font-size: 16px;
 		font-weight: 400;
 		font-style: italic;
@@ -76,7 +66,7 @@
 			content: '';
 			position: absolute;
 			z-index: 0;
-			background-color: var(--color-info-border);
+			background-color: var(--color-info-str);
 		}
 		
 		&.headline--intro {

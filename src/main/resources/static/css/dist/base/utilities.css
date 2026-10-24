@@ -1,24 +1,24 @@
-@utility heading-1 {
+@utility preset-1 {
 	@apply font-sans font-extrabold text-[40px] leading-[130%] tracking-[-1px];
 }
 
-@utility heading-2 {
+@utility preset-2 {
 	@apply font-sans font-extrabold text-[32px] leading-[130%] tracking-[-0.5px];
 }
 
-@utility heading-3 {
+@utility preset-3 {
 	@apply font-sans font-bold text-[28px] leading-[130%] tracking-[-0.5px];
 }
 
-@utility heading-4 {
+@utility preset-4 {
 	@apply font-sans font-semibold text-2xl leading-[130%] tracking-[-0.5px];
 }
 
-@utility heading-5 {
+@utility preset-5 {
 	@apply font-sans font-semibold text-xl leading-[130%] tracking-[-0.5px];
 }
 
-@utility heading-6 {
+@utility preset-6 {
 	@apply font-sans font-medium text-lg leading-[150%] tracking-[-0.2px];
 }
 
@@ -32,10 +32,6 @@
 
 @utility preset-8 {
 	@apply font-sans font-normal text-base leading-[130%] tracking-[-0.2px];
-}
-
-@utility preset-8-italic {
-	@apply preset-8 italic;
 }
 
 @utility preset-9 {
